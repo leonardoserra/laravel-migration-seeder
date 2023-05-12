@@ -25,7 +25,7 @@ class UsersTableSeeder extends Seeder
             $newTrain->stazione_di_arrivo = $faker->city();
             $newTrain->orario_di_partenza = $faker->time();
             $newTrain->orario_di_arrivo = $faker->time();
-            $newTrain->data_di_partenza = $faker->date('Y_m_d');
+            $newTrain->data_di_partenza = date('Y-m-d');
             $newTrain->codice_treno =  $faker->isbn10();
             $newTrain->numero_carrozze = $faker-> numberBetween(0, 12);
             $newTrain->in_orario = $faker->numberBetween(0, 1);
