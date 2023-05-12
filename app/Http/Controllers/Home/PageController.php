@@ -11,8 +11,8 @@ class PageController extends Controller
 
         
 
-        $trains = Train::all();
-
+        $trains = Train::whereDate('data_di_partenza', '=', date('Y-m-d'))->get();
+        // dd($trains);
         return view('home', compact('trains'));
     }
 }

@@ -16,7 +16,9 @@
 </head>
 
 <body>
-
+      @foreach ($trains as $train)
+            {{ $train['azienda'] }}
+      @endforeach
 
 </body>
 
