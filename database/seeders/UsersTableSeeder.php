@@ -23,12 +23,13 @@ class UsersTableSeeder extends Seeder
             $newTrain->azienda = $faker->word();
             $newTrain->stazione_di_partenza = $faker->city() ;
             $newTrain->stazione_di_arrivo = $faker->city();
-            $newTrain->orario_di_partenza = $faker->'12:12:56';
-            $newTrain->orario_di_arrivo = $faker->'01:02:56';
-            $newTrain->codice_treno = $faker->'TRNTL00001';
-            $newTrain->numero_carrozze = $faker->;
-            $newTrain->in_orario = 1;
-            $newTrain->cancellato = 0;
+            $newTrain->orario_di_partenza = $faker->time();
+            $newTrain->orario_di_arrivo = $faker->time();
+            $newTrain->data_di_partenza = $faker->date('Y_m_d');
+            $newTrain->codice_treno =  $faker->isbn10();
+            $newTrain->numero_carrozze = $faker-> numberBetween(0, 12);
+            $newTrain->in_orario = $faker->numberBetween(0, 1);
+            $newTrain->cancellato = $faker->numberBetween(0, 1);
         }
     }
 }
