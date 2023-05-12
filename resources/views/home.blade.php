@@ -42,10 +42,10 @@
                                                 Data di partenza: {{ $train['data_di_partenza'] }}
                                           </li>
                                           <li class="list-group-item">
-                                                Codice Treno{{ $train['codice_treno'] }}
+                                                Codice Treno: {{ $train['codice_treno'] }}
                                           </li>
                                           <li class="list-group-item">
-                                                Numero Vagoni{{ $train['numero_carrozze'] }}
+                                                Numero Vagoni: {{ $train['numero_carrozze'] }}
                                           </li>
                                           <li class="list-group-item">
                                                 {{ $train['in_orario'] ? 'in orario' : 'in ritardo' }}
