@@ -25,11 +25,13 @@ class UserTableSeeder extends Seeder{
             $train->stazione_di_arrivo = $faker->city();
             $train->orario_di_partenza = $faker->time();
             $train->orario_di_arrivo = $faker->time();
-            $train->data_di_partenza = $faker->date('Y_m_d');
+            $train->data_di_partenza = date('Y_m_d');
             $train->codice_treno =  $faker->isbn10();
             $train->numero_carrozze = $faker-> numberBetween(0, 12);
             $train->in_orario = $faker->numberBetween(0, 1);
             $train->cancellato = $faker->numberBetween(0, 1);
+            $train->save();
+
         }
     }
 }
