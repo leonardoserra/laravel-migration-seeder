@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Functions\Helpers;
 use App\Models\Train;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -13,24 +14,28 @@ class UserTableSeeder extends Seeder{
      *
      * @return void
      */
-    public function run(Faker $faker)
+    public function run()
     {
 
-        for($i = 0; $i < 20; $i++){
+        $contenutoCSV = Helpers::prelevaDaCvs(__DIR__ . '/trains.csv');
 
-            $train = new Train();
+        foreach($contenutoCSV  as $index => $row ){
+            if($index > 0){
 
-            $train->azienda = $faker->word();
-            $train->stazione_di_partenza = $faker->city() ;
-            $train->stazione_di_arrivo = $faker->city();
-            $train->orario_di_partenza = $faker->time();
-            $train->orario_di_arrivo = $faker->time();
-            $train->data_di_partenza = date('Y_m_d');
-            $train->codice_treno =  $faker->isbn10();
-            $train->numero_carrozze = $faker-> numberBetween(0, 12);
-            $train->in_orario = $faker->numberBetween(0, 1);
-            $train->cancellato = $faker->numberBetween(0, 1);
-            $train->save();
+                $train = new Train();
+    
+                $train->azienda = $row[0];
+                $train->stazione_di_partenza = $row[1]; 
+                $train->stazione_di_arrivo = $row[2];
+                $train->orario_di_partenza = $row[3];
+                $train->orario_di_arrivo = $row[4];
+                $train->data_di_partenza = $row[5];
+                $train->codice_treno =  $row[6];
+                $train->numero_carrozze = $row[7];
+                $train->in_orario = $row[8];
+                $train->cancellato = $row[9];
+                $train->save();
+            }
 
         }
     }
