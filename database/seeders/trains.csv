@@ -1,7 +1,7 @@
 azienda,stazione_di_partenza,stazione_di_arrivo,orario_di_partenza,orario_di_arrivo,data_di_partenza,codice_treno,numero_carrozze,in_orario,cancellato
 tranitalia,roma,milano,10:00:00,12:00:00,2022-11-23,AB123PGH15,8,1,0
-tranitalia,milano,napoli,10:00:00,12:00:00,2022-11-24,AB124UHJ09,8,1,0
+italico,milano,napoli,10:00:00,12:00:00,2022-11-24,AB124UHJ09,8,1,0
 tranitalia,napoli,roma,10:00:00,12:00:00,2022-11-25,AB125HSY65,8,1,0
-tranitalia,roma,milano,10:00:00,12:00:00,2022-11-26,AB126MCH36,10,1,0
+megatreni,roma,milano,10:00:00,12:00:00,2022-11-26,AB126MCH36,10,1,0
 tranitalia,milano,napoli,10:00:00,12:00:00,2022-11-27,AB127CBH12,10,1,0
-tranitalia,napoli,roma,10:00:00,12:00:00,2022-11-28,AB128NHYT5,10,0,1
+rotaie_express,napoli,roma,10:00:00,12:00:00,2022-11-28,AB128NHYT5,10,0,1
